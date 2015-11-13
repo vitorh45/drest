@@ -1,0 +1,679 @@
+[2015-11-13 12:01:44 +0000] [16986] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x8e9ab54>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x8e9aa04>
+  pre_fork: <function pre_fork at 0x8e9aaac>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 0
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 2
+  proc_name: None
+  sendfile: True
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x8e9a95c>
+  pre_exec: <function pre_exec at 0x8e9adf4>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x8e9abfc>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x8ea1144>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x8e9ae9c>
+  post_request: <function post_request at 0x8e9af0c>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x8e9aca4>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x8e9afb4>
+  chdir: /home/vitorcampos/projects/drest/drest
+  paste: None
+  default_proc_name: drest.wsgi:application
+  errorlog: /home/vitorcampos/projects/drest/logs/gunicorn.log
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x8e9a8b4>
+  worker_abort: <function worker_abort at 0x8e9ad4c>
+  bind: ['127.0.0.1:8000']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x8ea109c>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2015-11-13 12:01:44 +0000] [16986] [INFO] Starting gunicorn 19.3.0
+[2015-11-13 12:01:44 +0000] [16986] [DEBUG] Arbiter booted
+[2015-11-13 12:01:44 +0000] [16986] [INFO] Listening at: http://127.0.0.1:8000 (16986)
+[2015-11-13 12:01:44 +0000] [16986] [INFO] Using worker: sync
+[2015-11-13 12:01:44 +0000] [17003] [INFO] Booting worker with pid: 17003
+[2015-11-13 12:01:44 +0000] [17003] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+ImportError: No module named drest.wsgi
+Traceback (most recent call last):
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+ImportError: No module named drest.wsgi
+[2015-11-13 12:01:44 +0000] [17003] [INFO] Worker exiting (pid: 17003)
+Traceback (most recent call last):
+  File "/home/vitorcampos/projects/venvs/drest/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==19.3.0', 'console_scripts', 'gunicorn')()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 189, in run
+    super(Application, self).run()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 174, in run
+    self.manage_workers()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 477, in manage_workers
+    self.spawn_workers()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 541, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 214, in handle_chld
+    self.reap_workers()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2015-11-13 12:01:45 +0000] [17004] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x95a0b54>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x95a0a04>
+  pre_fork: <function pre_fork at 0x95a0aac>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 0
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 2
+  proc_name: None
+  sendfile: True
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x95a095c>
+  pre_exec: <function pre_exec at 0x95a0df4>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x95a0bfc>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x95a7144>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x95a0e9c>
+  post_request: <function post_request at 0x95a0f0c>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x95a0ca4>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x95a0fb4>
+  chdir: /home/vitorcampos/projects/drest/drest
+  paste: None
+  default_proc_name: drest.wsgi:application
+  errorlog: /home/vitorcampos/projects/drest/logs/gunicorn.log
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x95a08b4>
+  worker_abort: <function worker_abort at 0x95a0d4c>
+  bind: ['127.0.0.1:8000']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x95a709c>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2015-11-13 12:01:45 +0000] [17004] [INFO] Starting gunicorn 19.3.0
+[2015-11-13 12:01:45 +0000] [17004] [DEBUG] Arbiter booted
+[2015-11-13 12:01:45 +0000] [17004] [INFO] Listening at: http://127.0.0.1:8000 (17004)
+[2015-11-13 12:01:45 +0000] [17004] [INFO] Using worker: sync
+[2015-11-13 12:01:45 +0000] [17015] [INFO] Booting worker with pid: 17015
+[2015-11-13 12:01:45 +0000] [17015] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+ImportError: No module named drest.wsgi
+Traceback (most recent call last):
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+ImportError: No module named drest.wsgi
+[2015-11-13 12:01:45 +0000] [17015] [INFO] Worker exiting (pid: 17015)
+Traceback (most recent call last):
+  File "/home/vitorcampos/projects/venvs/drest/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==19.3.0', 'console_scripts', 'gunicorn')()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 189, in run
+    super(Application, self).run()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 174, in run
+    self.manage_workers()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 477, in manage_workers
+    self.spawn_workers()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 541, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 214, in handle_chld
+    self.reap_workers()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2015-11-13 12:01:47 +0000] [17022] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0xa0f8b54>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0xa0f8a04>
+  pre_fork: <function pre_fork at 0xa0f8aac>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 0
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 2
+  proc_name: None
+  sendfile: True
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0xa0f895c>
+  pre_exec: <function pre_exec at 0xa0f8df4>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0xa0f8bfc>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0xa0ff144>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0xa0f8e9c>
+  post_request: <function post_request at 0xa0f8f0c>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0xa0f8ca4>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0xa0f8fb4>
+  chdir: /home/vitorcampos/projects/drest/drest
+  paste: None
+  default_proc_name: drest.wsgi:application
+  errorlog: /home/vitorcampos/projects/drest/logs/gunicorn.log
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0xa0f88b4>
+  worker_abort: <function worker_abort at 0xa0f8d4c>
+  bind: ['127.0.0.1:8000']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0xa0ff09c>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2015-11-13 12:01:47 +0000] [17022] [INFO] Starting gunicorn 19.3.0
+[2015-11-13 12:01:47 +0000] [17022] [DEBUG] Arbiter booted
+[2015-11-13 12:01:47 +0000] [17022] [INFO] Listening at: http://127.0.0.1:8000 (17022)
+[2015-11-13 12:01:47 +0000] [17022] [INFO] Using worker: sync
+[2015-11-13 12:01:47 +0000] [17032] [INFO] Booting worker with pid: 17032
+[2015-11-13 12:01:47 +0000] [17032] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+ImportError: No module named drest.wsgi
+Traceback (most recent call last):
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+ImportError: No module named drest.wsgi
+[2015-11-13 12:01:47 +0000] [17032] [INFO] Worker exiting (pid: 17032)
+Traceback (most recent call last):
+  File "/home/vitorcampos/projects/venvs/drest/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==19.3.0', 'console_scripts', 'gunicorn')()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 189, in run
+    super(Application, self).run()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 174, in run
+    self.manage_workers()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 477, in manage_workers
+    self.spawn_workers()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 541, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 214, in handle_chld
+    self.reap_workers()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2015-11-13 12:01:50 +0000] [17044] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x9269b54>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0x9269a04>
+  pre_fork: <function pre_fork at 0x9269aac>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 0
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 2
+  proc_name: None
+  sendfile: True
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0x926995c>
+  pre_exec: <function pre_exec at 0x9269df4>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0x9269bfc>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0x9270144>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x9269e9c>
+  post_request: <function post_request at 0x9269f0c>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x9269ca4>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0x9269fb4>
+  chdir: /home/vitorcampos/projects/drest/drest
+  paste: None
+  default_proc_name: drest.wsgi:application
+  errorlog: /home/vitorcampos/projects/drest/logs/gunicorn.log
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0x92698b4>
+  worker_abort: <function worker_abort at 0x9269d4c>
+  bind: ['127.0.0.1:8000']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0x927009c>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2015-11-13 12:01:50 +0000] [17044] [INFO] Starting gunicorn 19.3.0
+[2015-11-13 12:01:50 +0000] [17044] [DEBUG] Arbiter booted
+[2015-11-13 12:01:50 +0000] [17044] [INFO] Listening at: http://127.0.0.1:8000 (17044)
+[2015-11-13 12:01:50 +0000] [17044] [INFO] Using worker: sync
+[2015-11-13 12:01:50 +0000] [17054] [INFO] Booting worker with pid: 17054
+[2015-11-13 12:01:50 +0000] [17054] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+ImportError: No module named drest.wsgi
+Traceback (most recent call last):
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+ImportError: No module named drest.wsgi
+[2015-11-13 12:01:50 +0000] [17054] [INFO] Worker exiting (pid: 17054)
+Traceback (most recent call last):
+  File "/home/vitorcampos/projects/venvs/drest/bin/gunicorn", line 9, in <module>
+    load_entry_point('gunicorn==19.3.0', 'console_scripts', 'gunicorn')()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 189, in run
+    super(Application, self).run()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 174, in run
+    self.manage_workers()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 477, in manage_workers
+    self.spawn_workers()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 541, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 214, in handle_chld
+    self.reap_workers()
+  File "/home/vitorcampos/projects/venvs/drest/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 459, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2015-11-13 12:02:54 +0000] [17143] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0xa3ceb8c>
+  pythonpath: None
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 3
+  suppress_ragged_eofs: True
+  syslog: False
+  syslog_facility: user
+  when_ready: <function when_ready at 0xa3cea3c>
+  pre_fork: <function pre_fork at 0xa3ceae4>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  accesslog: None
+  group: 0
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  workers: 2
+  proc_name: None
+  sendfile: True
+  pidfile: None
+  umask: 0
+  on_reload: <function on_reload at 0xa3ce994>
+  pre_exec: <function pre_exec at 0xa3cee2c>
+  worker_tmp_dir: None
+  post_worker_init: <function post_worker_init at 0xa3cec34>
+  limit_request_fields: 100
+  on_exit: <function on_exit at 0xa3d517c>
+  config: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0xa3ceed4>
+  post_request: <function post_request at 0xa3cef44>
+  user: 1000
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0xa3cecdc>
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  worker_exit: <function worker_exit at 0xa3d502c>
+  chdir: /home/vitorcampos/projects/drest
+  paste: None
+  default_proc_name: drest.wsgi:application
+  errorlog: /home/vitorcampos/projects/drest/logs/gunicorn.log
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  daemon: False
+  ciphers: TLSv1
+  on_starting: <function on_starting at 0xa3ce8ec>
+  worker_abort: <function worker_abort at 0xa3ced84>
+  bind: ['127.0.0.1:8000']
+  raw_env: []
+  reload: False
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function nworkers_changed at 0xa3d50d4>
+  timeout: 30
+  ca_certs: None
+  django_settings: None
+  tmp_upload_dir: None
+  keyfile: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+[2015-11-13 12:02:54 +0000] [17143] [INFO] Starting gunicorn 19.3.0
+[2015-11-13 12:02:54 +0000] [17143] [DEBUG] Arbiter booted
+[2015-11-13 12:02:54 +0000] [17143] [INFO] Listening at: http://127.0.0.1:8000 (17143)
+[2015-11-13 12:02:54 +0000] [17143] [INFO] Using worker: sync
+[2015-11-13 12:02:54 +0000] [17160] [INFO] Booting worker with pid: 17160
+[2015-11-13 12:02:54 +0000] [17165] [INFO] Booting worker with pid: 17165
+[2015-11-13 12:02:54 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:02:55 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:02:56 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:02:57 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:02:58 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:02:59 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:00 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:01 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:02 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:03 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:04 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:05 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 14:03:06 +0000] [17165] [DEBUG] GET /
+[2015-11-13 12:03:06 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:07 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:08 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:09 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:10 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:11 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:12 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:13 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:14 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:15 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:16 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:17 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:18 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:19 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:20 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:21 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:22 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:23 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:24 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:25 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:26 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:27 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:28 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:29 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:30 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:31 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:32 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:33 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:34 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:35 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:36 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:37 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:38 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:39 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:40 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:41 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:42 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:43 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:44 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:45 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:46 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:47 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:48 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:49 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:50 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:51 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:52 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:53 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:54 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:55 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:56 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:57 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:58 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:03:59 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:04:00 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:04:01 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:04:02 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:04:03 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:04:04 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:04:05 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:04:06 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:04:07 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:04:08 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:04:09 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:04:10 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:04:11 +0000] [17143] [DEBUG] 2 workers
+[2015-11-13 12:04:11 +0000] [17143] [INFO] Handling signal: term
+[2015-11-13 14:04:11 +0000] [17165] [INFO] Worker exiting (pid: 17165)
+[2015-11-13 14:04:11 +0000] [17160] [INFO] Worker exiting (pid: 17160)
+[2015-11-13 12:04:11 +0000] [17143] [INFO] Shutting down: Master
